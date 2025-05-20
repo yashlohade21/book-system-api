@@ -260,3 +260,5 @@ The API includes comprehensive error handling for:
 - Authorization errors
 
 ## Results
+Here’s a screenshot of the API in action:
+![Train Reservation Screenshot](https://github.com/yashlohade21/train-reservation/blob/master/styles/p1.png?raw=true)
