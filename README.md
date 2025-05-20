@@ -261,4 +261,12 @@ The API includes comprehensive error handling for:
 
 ## Results
 Here’s a screenshot of the API in action:
-![Train Reservation Screenshot](https://github.com/yashlohade21/train-reservation/blob/master/styles/p1.png?raw=true)
+|--------------|--------------|--------------|
+
+| ![p1](https://github.com/yashlohade21/train-reservation/blob/master/styles/p1.png?raw=true) | ![p2](https://github.com/yashlohade21/train-reservation/blob/master/styles/p2.png?raw=true) | ![p3](https://github.com/yashlohade21/train-reservation/blob/master/styles/p3.png?raw=true) |
+
+|--------------|--------------|--------------|
+| ![p4](https://github.com/yashlohade21/train-reservation/blob/master/styles/p4.png?raw=true) | ![p5](https://github.com/yashlohade21/train-reservation/blob/master/styles/p5.png?raw=true) | ![p6](https://github.com/yashlohade21/train-reservation/blob/master/styles/p6.png?raw=true) |
+
+|--------------|--------------|--------------|
+| ![p7](https://github.com/yashlohade21/train-reservation/blob/master/styles/p7.png?raw=true) | ![p8](https://github.com/yashlohade21/train-reservation/blob/master/styles/p8.png?raw=true) | ![p9](https://github.com/yashlohade21/train-reservation/blob/master/styles/p9.png?raw=true) |
