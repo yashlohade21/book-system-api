@@ -260,4 +260,4 @@ The API includes comprehensive error handling for:
 - Authorization errors
 
 ## Results
-https://github.com/yashlohade21/train-reservation/blob/master/styles/p1.png?raw=true
+![alt text]([https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true](https://github.com/yashlohade21/train-reservation/blob/master/styles/p1.png?raw=true))
