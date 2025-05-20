@@ -9,10 +9,12 @@ const { protect } = require('../middleware/auth');
 
 const router = express.Router({ mergeParams: true });
 
+// Mount review routes
 router.route('/')
   .get(getReviews)
   .post(protect, addReview);
 
+// Mount individual review routes
 router.route('/:id')
   .put(protect, updateReview)
   .delete(protect, deleteReview);

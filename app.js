@@ -49,7 +49,8 @@ app.use(cors());
 // Mount routers
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/books', bookRoutes);
-app.use('/api/v1/books', reviewRoutes);
+app.use('/api/v1/reviews', reviewRoutes); // Add standalone reviews route
+app.use('/api/v1/books/:bookId/reviews', reviewRoutes); // Keep nested route
 
 // Error handler middleware
 app.use(errorHandler);

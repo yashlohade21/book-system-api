@@ -65,10 +65,9 @@ exports.updateReview = asyncHandler(async (req, res, next) => {
     return next(new ErrorResponse(`Not authorized to update review`, 401));
   }
 
-  review = await Review.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-    runValidators: true
-  });
+  // Update the review document
+  Object.assign(review, req.body);
+  await review.save();
 
   res.status(200).json({
     success: true,
@@ -93,7 +92,7 @@ exports.deleteReview = asyncHandler(async (req, res, next) => {
     return next(new ErrorResponse(`Not authorized to delete review`, 401));
   }
 
-  await review.remove();
+  await review.deleteOne(); // Using deleteOne instead of deprecated remove()
 
   res.status(200).json({
     success: true,

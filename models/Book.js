@@ -24,6 +24,12 @@ const bookSchema = new mongoose.Schema({
     trim: true,
     maxlength: [500, 'Description cannot be more than 500 characters']
   },
+  averageRating: {
+    type: Number,
+    min: [0, 'Rating must be at least 0'],
+    max: [5, 'Rating cannot be more than 5'],
+    default: 0
+  },
   createdAt: {
     type: Date,
     default: Date.now
@@ -34,35 +40,5 @@ const bookSchema = new mongoose.Schema({
     required: true
   }
 });
-
-// Calculate average rating for a book
-bookSchema.statics.getAverageRating = async function(bookId) {
-  const obj = await this.aggregate([
-    {
-      $match: { _id: bookId }
-    },
-    {
-      $lookup: {
-        from: 'reviews',
-        localField: '_id',
-        foreignField: 'book',
-        as: 'reviews'
-      }
-    },
-    {
-      $project: {
-        averageRating: { $avg: '$reviews.rating' }
-      }
-    }
-  ]);
-
-  try {
-    await this.model('Book').findByIdAndUpdate(bookId, {
-      averageRating: obj[0]?.averageRating || 0
-    });
-  } catch (err) {
-    console.error(err);
-  }
-};
 
 module.exports = mongoose.model('Book', bookSchema);
